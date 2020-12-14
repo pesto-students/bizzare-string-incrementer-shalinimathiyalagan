@@ -1,11 +1,11 @@
-function bizarreStringIncrementer (a)
+function bizarreStringIncrementer (bizarre)
 {
   let increment;
   var stringarray=[];
-  stringarray=a;
- var stringlength=a.length;
+  stringarray=bizarre;
+ var stringlength=bizarre.length;
  var array=[];
-  array=a.match(/\d+/g);
+  array=bizarre.match(/\d+/g);
    var first="0";
   if(array!=null){
 first=array.length;
@@ -17,18 +17,18 @@ if(array!=null){
     var replacevalue=array[first-1];
     if(replacevalue.includes("0")){
     var replacevaluelength=replacevalue.length;
-    increment=a.replace(replacevalue,(match)=>("0".repeat(replacevaluelength)+(++match)).substr(-replacevaluelength));
+    increment=bizarre.replace(replacevalue,(match)=>("0".repeat(replacevaluelength)+(++match)).substr(-replacevaluelength));
     }else if(first>1){
-    increment=a.replace(replacevalue,++replacevalue);
+    increment=bizarre.replace(replacevalue,++replacevalue);
     }
    else{
-increment = a.replace(array,++array);
+increment = bizarre.replace(array,++array);
   }
     
   }
   }
   else{
-increment=a+1;
+increment=bizarre+1;
   }
 console.log(increment);
 }
